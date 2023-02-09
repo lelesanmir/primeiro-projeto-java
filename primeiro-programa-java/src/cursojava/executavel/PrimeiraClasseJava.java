@@ -60,9 +60,9 @@ public class PrimeiraClasseJava {
 		aluno2.setNumeroCpf("1234");
 		
 		if (aluno1.equals(aluno2)) {
-			System.out.println("Alunos são iguais");
+			System.out.println("Alunos são iguais!");
 		} else {
-			System.out.println("Alunos não são iguais");
+			System.out.println("Alunos não são iguais!");
 		}
 		
 	}
