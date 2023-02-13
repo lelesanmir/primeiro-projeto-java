@@ -116,6 +116,12 @@ public class Disciplina {
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "Disciplina [nota1=" + nota1 + ", disciplina1=" + disciplina1 + ", nota2=" + nota2 + ", disciplina2="
+				+ disciplina2 + ", nota3=" + nota3 + ", disciplina3=" + disciplina3 + ", nota4=" + nota4
+				+ ", disciplina4=" + disciplina4 + "]";
+	}
 	
 	
 	

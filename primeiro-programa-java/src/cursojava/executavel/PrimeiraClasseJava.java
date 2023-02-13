@@ -59,9 +59,9 @@ public class PrimeiraClasseJava {
 		
 
 		
-		System.out.println(aluno1); ///descrição da memória
+		System.out.println(aluno1); //descrição da memória
 		System.out.println("Média do aluno " + aluno1.getMediaNota());
-		
+		System.out.println("Situação " + aluno1.getAlunoAprovado());
 		
 		
 	}
