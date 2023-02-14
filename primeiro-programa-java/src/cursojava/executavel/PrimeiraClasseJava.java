@@ -75,20 +75,22 @@ public class PrimeiraClasseJava {
 
 			alunos.add(aluno1);
 		}
-		for (Aluno aluno : alunos) {
-
-			if (aluno.getNome().equalsIgnoreCase("Leonardo")) {
-				alunos.remove(aluno);
-				break;
-			} else {
-
-				System.out.println(aluno); // descrição da memória
-				System.out.println("Média do aluno " + aluno.getMediaNota());
-				System.out.println("Situação " + aluno.getAlunoAprovado2());
-				System.out.println("-------------------------------------------------------");
+		for (int pos = 0; pos < alunos.size(); pos ++) {
+			
+			Aluno aluno =alunos.get(pos);
+			
+			System.out.println("Aluno = " + aluno.getNome());
+			System.out.println("Media do aluno " + aluno.getMediaNota());
+			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+			System.out.println("------------------------------------------------------");
+			for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
+				
+				Disciplina disc = aluno.getDisciplinas().get(posd);
+				System.out.println("Matéria= " + disc.getDisciplina() + " Nota" + disc.getNota());
+				
+				
 			}
 		}
-
 	}
 
 }
