@@ -13,7 +13,7 @@ public class PrimeiraClasseJava {
 		/* aluno1 é uma referência para o objeto Aluno */
 
 		String nome = JOptionPane.showInputDialog("Qual nome do aluno?");
-		String idade = JOptionPane.showInputDialog("Qual é a idade?");
+		/*String idade = JOptionPane.showInputDialog("Qual é a idade?");
 		String dataNacimento = JOptionPane.showInputDialog("Data de nascimento?");
 		String rg = JOptionPane.showInputDialog("Registro Geral?");
 		String cpf = JOptionPane.showInputDialog("Qual é o CPF?");
@@ -21,14 +21,14 @@ public class PrimeiraClasseJava {
 		String pai = JOptionPane.showInputDialog("Qual nome do pai?");
 		String matricula = JOptionPane.showInputDialog("Data da matricula?");
 		String serie = JOptionPane.showInputDialog("Qual a serie?");
-		String escola = JOptionPane.showInputDialog("Qual é a escola?");
+		String escola = JOptionPane.showInputDialog("Qual é a escola?");*/
 
 		
 
 		Aluno aluno1 = new Aluno(); /* Aqui será o João */
 
 		aluno1.setNome(nome);
-		aluno1.setIdade(Integer.valueOf(idade));
+		/*aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNacimento);
 		aluno1.setRegistroGeral(rg);
 		aluno1.setNumeroCpf(cpf);
@@ -36,7 +36,7 @@ public class PrimeiraClasseJava {
 		aluno1.setNomePai(pai);
 		aluno1.setDataMatricula(matricula);
 		aluno1.setSerieMatriculado(serie);
-		aluno1.setNomeEscola(escola);
+		aluno1.setNomeEscola(escola);*/
 
 		for (int pos = 1; pos <=4; pos++)  {
 			
@@ -59,7 +59,7 @@ public class PrimeiraClasseJava {
 
 		System.out.println(aluno1); // descrição da memória
 		System.out.println("Média do aluno " + aluno1.getMediaNota());
-		System.out.println("Situação " + aluno1.getAlunoAprovado());
+		System.out.println("Situação " + aluno1.getAlunoAprovado2());
 
 	}
 
