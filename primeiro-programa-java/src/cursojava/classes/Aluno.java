@@ -139,12 +139,12 @@ public class Aluno {
 	}
 	
 	/*Método que retorna true para aprovado e false para reprovado*/
-	public boolean getAlunoAprovado() {
+	public String getAlunoAprovado() {
 		double media = this.getMediaNota();
 		if (media >= 70) {
-			return true;
+			return "Aprovado";
 		} else {
-			return false;
+			return "Reprovado";
 		}
 
 	}
