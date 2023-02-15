@@ -44,7 +44,7 @@ public class PrimeiraClasseJava {
 			 * aluno1.setNomeEscola(escola);
 			 */
 
-			for (int pos = 1; pos <= 4; pos++) {
+			for (int pos = 1; pos <= 1; pos++) {
 
 				String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + " ?");
 				String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos + " ?");
@@ -79,14 +79,30 @@ public class PrimeiraClasseJava {
 			
 			Aluno aluno =alunos.get(pos);
 			
+			if (aluno.getNome().equalsIgnoreCase("Leo")) {
+				Aluno trocar = new Aluno();
+				trocar.setNome("Aluno foi trocado");
+				Disciplina disciplina = new Disciplina();
+				disciplina.setDisciplina("Matematica");
+				disciplina.setNota(96);
+				
+				trocar.getDisciplinas().add(disciplina);
+				
+				alunos.set(pos, trocar);
+				
+				aluno = alunos.get(pos);
+			}
+			
 			System.out.println("Aluno = " + aluno.getNome());
 			System.out.println("Media do aluno " + aluno.getMediaNota());
 			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
-			System.out.println("------------------------------------------------------");
+			
+			
 			for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
 				
 				Disciplina disc = aluno.getDisciplinas().get(posd);
 				System.out.println("Matéria= " + disc.getDisciplina() + " Nota" + disc.getNota());
+				
 				
 				
 			}
