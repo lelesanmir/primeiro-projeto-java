@@ -155,12 +155,12 @@ public class Aluno {
 		double media = this.getMediaNota();
 		if (media >= 50) {
 			if (media >= 70) {
-			return StatusAluno.Aprovado;
+			return StatusAluno.APROVADO;
 		} else {
-			return StatusAluno.Recuperacao;
+			return StatusAluno.RECUPERACAO;
 		}
 		}else {
-			return StatusAluno.Reprovado;
+			return StatusAluno.REPROVADO;
 			}
 		}
 			
