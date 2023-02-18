@@ -7,7 +7,9 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
 
 public class PrimeiraClasseJava {
@@ -16,9 +18,12 @@ public class PrimeiraClasseJava {
 	public static void main(String[] args) {
 
 		String login = JOptionPane.showInputDialog("Informe o login");
-		String senha = JOptionPane.showInputDialog("Informe o senha");
-		if(login.equalsIgnoreCase("admin") &&
-				senha.equalsIgnoreCase("admin")) {
+		String senha = JOptionPane.showInputDialog("Informe o senha");		
+		
+		
+		
+		 
+		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {/*Vou travar o contrato para autorizar somente quem realmente tem o contrato% legitimo*/
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
@@ -108,16 +113,20 @@ public class PrimeiraClasseJava {
 			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com média de =" + aluno.getMediaNota());
 		}
 		
-		System.out.println("---------------------------Listas de Recuperação-----------------------------");
-		for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
-			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com média de =" + aluno.getMediaNota());
-		}
-		
 		System.out.println("---------------------------Listas dos Reprovados-----------------------------");
 		for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
 			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com média de =" + aluno.getMediaNota());
 		}
 		
+		System.out.println("---------------------------Listas de Recuperação-----------------------------");
+		for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
+			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com média de =" + aluno.getMediaNota());
+		}
+		
+		
+		
+		}else{
+		JOptionPane.showConfirmDialog(null, "Acesso não permitido");
 	}
 		
 	}
