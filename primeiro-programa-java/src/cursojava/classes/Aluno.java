@@ -5,21 +5,18 @@ import java.util.List;
 
 import cursojava.constantes.StatusAluno;
 
-/*Essa é nossa classe/objeto que representa Aluno*/
-public class Aluno {
+/**
+ * Classe filha de pessoa que extende de pessoa
+ * @author Leonardo
+ *
+ */
+public class Aluno extends Pessoa {
 
 	/* Esses são atributos do Aluno */
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
+
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
 	public void setDisciplinas(List<Disciplina> disciplinas) {
@@ -209,6 +206,18 @@ public class Aluno {
 		return true;
 	}
 	
+	@Override
+	public boolean pessoaMaiorIdade() {
+		
+		return idade >= 21;
+	}
 	
-	
+	public String msgMaiorIdade() {
+		return this.pessoaMaiorIdade()? "Obaa aluno é maior de idade" : "Ixxi você é menor de idade";
+	}
+	@Override
+	public double salario() {
+		
+		return 1500.90;
+	}
 }
