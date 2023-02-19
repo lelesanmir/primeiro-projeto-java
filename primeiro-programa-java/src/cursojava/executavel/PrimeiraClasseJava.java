@@ -1,5 +1,6 @@
 package cursojava.executavel;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,6 +17,9 @@ public class PrimeiraClasseJava {
 	/* Main é um método auto executável em Java */
 	@SuppressWarnings("rawTypes")
 	public static void main(String[] args) {
+		try {
+			
+			new File("arquivo.txt");
 
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe o senha");		
@@ -32,15 +36,16 @@ public class PrimeiraClasseJava {
 		
 		
 
-		for (int qtd = 1; qtd <= 5; qtd++) {
+		for (int qtd = 1; qtd <= 1; qtd++) {
 
 			/* new Aluno() é uma instancia (criacçao de objeto) */
 			/* aluno1 é uma referência para o objeto Aluno */
 
-			String nome = JOptionPane.showInputDialog("Qual nome do aluno " + qtd + " ?");
-			/*
-			 * String idade = JOptionPane.showInputDialog("Qual é a idade?"); String
-			 * dataNacimento = JOptionPane.showInputDialog("Data de nascimento?"); String rg
+			String nome = JOptionPane.showInputDialog("Qual nome do aluno " + qtd + " ?");			
+			String idade = JOptionPane.showInputDialog("Qual é a idade?"); 
+			
+			 /*String
+			 *dataNacimento = JOptionPane.showInputDialog("Data de nascimento?"); String rg
 			 * = JOptionPane.showInputDialog("Registro Geral?"); String cpf =
 			 * JOptionPane.showInputDialog("Qual é o CPF?"); String mae =
 			 * JOptionPane.showInputDialog("Qual nome da mãe?"); String pai =
@@ -52,10 +57,10 @@ public class PrimeiraClasseJava {
 
 			Aluno aluno1 = new Aluno(); /* Aqui será o João */
 
-			aluno1.setNome(nome);
-			/*
-			 * aluno1.setIdade(Integer.valueOf(idade));
-			 * aluno1.setDataNascimento(dataNacimento); aluno1.setRegistroGeral(rg);
+			aluno1.setNome(nome);			
+			aluno1.setIdade(Integer.valueOf(idade));
+			
+			 /* aluno1.setDataNascimento(dataNacimento); aluno1.setRegistroGeral(rg);
 			 * aluno1.setNumeroCpf(cpf); aluno1.setNomeMae(mae); aluno1.setNomePai(pai);
 			 * aluno1.setDataMatricula(matricula); aluno1.setSerieMatriculado(serie);
 			 * aluno1.setNomeEscola(escola);
@@ -128,7 +133,32 @@ public class PrimeiraClasseJava {
 		}else{
 		JOptionPane.showConfirmDialog(null, "Acesso não permitido");
 	}
-		
+		}catch (NumberFormatException e) {
+			
+			StringBuilder saida = new StringBuilder();
+			
+			e.printStackTrace();/*Imprime erro no console Java*/
+			
+			System.out.println("Mensagem: " + e.getMessage());
+			
+			for (int i = 0; i < e.getStackTrace().length; i++) {
+				
+				saida.append("\n Classe de erro : " +e.getStackTrace()[i].getClassName());
+				saida.append("\n Método de erro : " +e.getStackTrace()[i].getMethodName());
+				saida.append("\n Linha do erro : " +e.getStackTrace()[i].getLineNumber());
+				saida.append("\n Class : " +e.getClass().getName());
+				
+				
+			}
+			
+			JOptionPane.showMessageDialog(null, " Erro de conversão de número" + saida.toString());
+		}catch (NullPointerException e) {
+			JOptionPane.showMessageDialog(null, " Opa um null pointer exception : " + e.getClass());
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
+		
+		
 }
