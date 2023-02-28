@@ -11,7 +11,7 @@ import cursojava.classes.Disciplina;
 import cursojava.constantes.StatusAluno;
 
 public class PrimeiraClasseJava {
-	/* Main é um método auto executável em Java */
+	// MÃ©todo principal
 	@SuppressWarnings("rawTypes")
 	public static void main(String[] args) {
 
@@ -22,30 +22,30 @@ public class PrimeiraClasseJava {
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
-		/*é uma lista que dentro dela temos uma chave que indentifica uma sequência de valores também*/
+		/*ï¿½ uma lista que dentro dela temos uma chave que indentifica uma sequï¿½ncia de valores tambï¿½m*/
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 		
 		
 
 		for (int qtd = 1; qtd <= 5; qtd++) {
 
-			/* new Aluno() é uma instancia (criacçao de objeto) */
-			/* aluno1 é uma referência para o objeto Aluno */
+			/* new Aluno() ï¿½ uma instancia (criacï¿½ao de objeto) */
+			/* aluno1 ï¿½ uma referï¿½ncia para o objeto Aluno */
 
 			String nome = JOptionPane.showInputDialog("Qual nome do aluno " + qtd + " ?");
 			/*
-			 * String idade = JOptionPane.showInputDialog("Qual é a idade?"); String
+			 * String idade = JOptionPane.showInputDialog("Qual ï¿½ a idade?"); String
 			 * dataNacimento = JOptionPane.showInputDialog("Data de nascimento?"); String rg
 			 * = JOptionPane.showInputDialog("Registro Geral?"); String cpf =
-			 * JOptionPane.showInputDialog("Qual é o CPF?"); String mae =
-			 * JOptionPane.showInputDialog("Qual nome da mãe?"); String pai =
+			 * JOptionPane.showInputDialog("Qual ï¿½ o CPF?"); String mae =
+			 * JOptionPane.showInputDialog("Qual nome da mï¿½e?"); String pai =
 			 * JOptionPane.showInputDialog("Qual nome do pai?"); String matricula =
 			 * JOptionPane.showInputDialog("Data da matricula?"); String serie =
 			 * JOptionPane.showInputDialog("Qual a serie?"); String escola =
-			 * JOptionPane.showInputDialog("Qual é a escola?");
+			 * JOptionPane.showInputDialog("Qual ï¿½ a escola?");
 			 */
 
-			Aluno aluno1 = new Aluno(); /* Aqui será o João */
+			Aluno aluno1 = new Aluno(); /* Aqui serï¿½ o Joï¿½o */
 
 			aluno1.setNome(nome);
 			/*
@@ -70,7 +70,7 @@ public class PrimeiraClasseJava {
 
 			int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina");
 
-			if (escolha == 0) { /* Opçao Sim é Zero */
+			if (escolha == 0) { /* Opï¿½ao Sim ï¿½ Zero */
 
 				int continuarRemover = 0;
 				int posicao = 1;
@@ -105,17 +105,17 @@ public class PrimeiraClasseJava {
 		
 		System.out.println("---------------------------Listas dos aprovados-----------------------------");
 		for (Aluno aluno : maps.get(StatusAluno.APROVADO)) {
-			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com média de =" + aluno.getMediaNota());
+			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com mï¿½dia de =" + aluno.getMediaNota());
 		}
 		
-		System.out.println("---------------------------Listas de Recuperação-----------------------------");
+		System.out.println("---------------------------Listas de Recuperaï¿½ï¿½o-----------------------------");
 		for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
-			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com média de =" + aluno.getMediaNota());
+			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com mï¿½dia de =" + aluno.getMediaNota());
 		}
 		
 		System.out.println("---------------------------Listas dos Reprovados-----------------------------");
 		for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
-			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com média de =" + aluno.getMediaNota());
+			System.out.println("Aluno = " + aluno.getAlunoAprovado2() + " Resultado =" + aluno.getAlunoAprovado2() + " com mï¿½dia de =" + aluno.getMediaNota());
 		}
 		
 	}

@@ -5,10 +5,10 @@ import java.util.List;
 
 import cursojava.constantes.StatusAluno;
 
-/*Essa é nossa classe/objeto que representa Aluno*/
+// Classe que representa o objeto Aluno
 public class Aluno {
 
-	/* Esses são atributos do Aluno */
+	// Propriedades da classe Aluno
 	private String nome;
 	private int idade;
 	private String dataNascimento;
@@ -21,7 +21,12 @@ public class Aluno {
 	private String serieMatriculado;
 
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
-	
+
+	/*
+	 MÃ©todos (GETTERS & SETERS) da classe Aluno
+	 GETTERS: Buscam valores;
+	 SETERS: Atribuam valores;
+	 */
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
 	}
@@ -30,7 +35,7 @@ public class Aluno {
 	}
 	
 
-	public Aluno() { /* Cria os dados na memória - Sendo padrão do Java */
+	public Aluno() { /* Cria os dados na memï¿½ria - Sendo padrï¿½o do Java */
 
 	}
 
@@ -43,9 +48,6 @@ public class Aluno {
 		idade = idadePadrao;
 	}
 
-	/* Veremos os métodos SETTERS E GETTERS do objeto */
-	/* Set é para adicionar ou receber dados para os atributos */
-	/* Get é para resgatar ou obter o valor do atributos */
 
 	/* Recebe dados */
 	public void setNome(String nome) {
@@ -129,7 +131,7 @@ public class Aluno {
 		this.serieMatriculado = serieMatriculado;
 	}
 
-	/*Método que retorna média do aluno*/
+	/*Mï¿½todo que retorna mï¿½dia do aluno*/
 	public double getMediaNota() {
 		
 		double somaNotas = 0.0;
@@ -140,7 +142,7 @@ public class Aluno {
 		return somaNotas / disciplinas.size();
 	}
 	
-	/*Método retorna true para aprovado ou false para reprovado*/
+	/*Mï¿½todo retorna true para aprovado ou false para reprovado*/
 	public boolean getAlunoAprovado1() {
 		double media = this.getMediaNota();
 		if (media >= 70) {/*Aprovado*/
@@ -150,7 +152,7 @@ public class Aluno {
 		}
 	}
 		
-	/*Método que retorna aprovado ou reprovado*/
+	/*Mï¿½todo que retorna aprovado ou reprovado*/
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
 		if (media >= 50) {

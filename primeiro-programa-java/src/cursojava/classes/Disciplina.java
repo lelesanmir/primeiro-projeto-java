@@ -1,11 +1,13 @@
 package cursojava.classes;
 
-/*Essa classe Disciplina servirá para todos os objetos e intancias de notas e materias */
+// Classe que representa o objeto Disciplina
 public class Disciplina {
 
+	//	Propriedades da classe Disciplina
 	private double nota;
 	private String disciplina;
 
+	// MÃ©todos (GETTERS & SETTERS) da classe Disciplina
 	public double getNota() {
 		return nota;
 	}
