@@ -1,11 +1,11 @@
 package cursojava.constantes;
 
-/*Classe e contantes estáticas*/
+/*Classe e contantes estï¿½ticas*/
 public class StatusAluno {
 
-	public static String APROVADO = "Aprovado";
+	public static final String APROVADO = "Aprovado";
 	
-	public static String RECUPERACAO = "Recuperacao";
+	public static final String RECUPERACAO = "Recuperacao";
 	
-	public static String REPROVADO = "Reprovado";
+	public static final String REPROVADO = "Reprovado";
 }
